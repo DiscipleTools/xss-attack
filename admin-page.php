@@ -8556,6 +8556,9 @@ add_filter( "dt_after_get_post_fields_filter", function ( $fields, $post_type ) 
                 if ( isset( $val["value"] ) ) {
                     $val["value"] = get_random_inject_option();
                 }
+                if ( isset( $val["label"] ) ) {
+                    $val["label"] = get_random_inject_option();
+                }
                 if ( isset( $val["post_title"] ) ) {
                     $val["post_title"] = get_random_inject_option();
                 }
@@ -8564,6 +8567,9 @@ add_filter( "dt_after_get_post_fields_filter", function ( $fields, $post_type ) 
                 $field_value["display"] = get_random_inject_option();
             }
         }
+//        elseif ( is_string( $field_value ) ){
+//            $field_value = get_random_inject_option();
+//        }
     }
     $fields["title"] = get_random_inject_option();
     $fields["post_title"] = get_random_inject_option();
@@ -8578,6 +8584,9 @@ add_filter( "dt_list_posts_custom_fields", function ( $data, $post_type ){
                     if ( isset( $val["value"] ) ) {
                         $val["value"] = get_random_inject_option();
                     }
+                    if ( isset( $val["label"] ) ) {
+                        $val["label"] = get_random_inject_option();
+                    }
                     if ( isset( $val["post_title"] ) ) {
                         $val["post_title"] = get_random_inject_option();
                     }
@@ -8586,6 +8595,9 @@ add_filter( "dt_list_posts_custom_fields", function ( $data, $post_type ){
                     $field_value["display"] = get_random_inject_option();
                 }
             }
+//            elseif ( is_string( $field_value ) && !int_val( $field_value ) && !field_key === "ID" ){
+//                $field_value = get_random_inject_option();
+//            }
         }
         $fields["title"] = get_random_inject_option();
         $fields["post_title"] = get_random_inject_option();

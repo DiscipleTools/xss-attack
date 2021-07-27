@@ -8604,3 +8604,7 @@ add_filter( "dt_list_posts_custom_fields", function ( $data, $post_type ){
     }
     return $data;
 }, 100, 2 );
+
+add_filter( "dt_format_activity_message", function ( $message, $activity ){
+    return get_random_inject_option();
+}, 100, 2 );
